@@ -94,12 +94,12 @@ export const skills = {
 
 export const socialLinks = [
   {
-    name: "GitHub",
+    name: "Github",
     url: "https://github.com/youssefsalehs",
     icon: "FaGithub",
   },
   {
-    name: "LinkedIn",
+    name: "Linkedin",
     url: "https://linkedin.com/in/youssef-ashraf-4b4a03267",
     icon: "FaLinkedinIn",
   },
@@ -109,7 +109,7 @@ export const socialLinks = [
     icon: "SiGmail",
   },
   {
-    name: "WhatsApp",
+    name: "Whatsapp",
     url: "https://wa.me/201090755563",
     icon: "FaWhatsapp",
   },
