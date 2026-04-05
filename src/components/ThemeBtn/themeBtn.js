@@ -10,6 +10,7 @@ export default function ThemeBtn() {
   return (
     <IconButton
       onClick={toggleMode}
+      aria-label="theme button"
       sx={{
         position: "fixed",
         left: 20,
