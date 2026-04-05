@@ -4,6 +4,7 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import CustomThemeProvider from "@/context/ThemeContext";
 import { Box } from "@mui/material";
 import ThemeBtn from "@/components/ThemeBtn/themeBtn";
+import Navbar from "@/components/Navbar/navbar";
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -44,7 +45,7 @@ export default function RootLayout({ children }) {
               }}
             >
               <ThemeBtn />
-
+              <Navbar />
               <main className="flex-1 max-w-7xl h-full px-8 mx-auto overflow-hidden">
                 {children}
               </main>
