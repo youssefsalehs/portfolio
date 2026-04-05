@@ -1,9 +1,11 @@
-import React from "react";
-import { TextField } from "@mui/material";
+"use client";
+import React, { useContext } from "react";
+import { Button, TextField } from "@mui/material";
 import { IoIosSend } from "react-icons/io";
-import MyButton from "../Buttons/mybutton";
+import { ThemeContext } from "@/context/ThemeContext";
 
 export default function Form() {
+  const { mode } = useContext(ThemeContext);
   return (
     <div className="w-full lg:w-[49%]  rounded-md overflow-hidden bg-primary-800 border border-secondary-700 bg-opacity-10 p-8 ">
       <form className="flex flex-col gap-6 h-full justify-between   ">
@@ -44,9 +46,18 @@ export default function Form() {
           />
         </div>
 
-        <MyButton variant={"secondary"}>
+        <Button
+          sx={{
+            bgcolor: "secondary.dark",
+            color: mode !== "dark" ? "secondary.light" : "text.primary",
+            "&:hover": {
+              bgcolor: "primary.dark",
+            },
+          }}
+          variant={"secondary"}
+        >
           <IoIosSend /> Send Message
-        </MyButton>
+        </Button>
       </form>
     </div>
   );

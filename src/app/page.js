@@ -1,7 +1,8 @@
 import HeroSection from "@/components/HeroSection/HeroSection";
 import AboutMe from "@/components/AboutMe/About";
-import Skills from "@/components/Skills/Skills";
+const Skills = dynamic(() => import("@/components/Skills/Skills"));
 import Contact from "@/components/Contact/Contact";
+import dynamic from "next/dynamic";
 
 export default function Home() {
   return (
