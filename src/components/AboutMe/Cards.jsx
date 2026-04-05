@@ -15,7 +15,7 @@ const items = [
 
 export default function Cards() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pb-10 lg:pb-0">
+    <div className="flex flex-col gap-3 pb-10 lg:pb-0">
       {items.map((item, i) => (
         <div
           key={i}
