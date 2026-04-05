@@ -84,7 +84,7 @@ export default function ShortBrief() {
       </div>
       <Link
         href={"/projects"}
-        className="bg-primary-700 bg-opacity-20 w-fit px-4 font-semibold py-3 mb-3 rounded-r-full flex items-center gap-2 -translate-x-[180px] hover:-translate-x-1 transition duration-300 hover:shadow-[0_0_5px_#c27cff65] border border-secondary-500 "
+        className="bg-primary-500 bg-opacity-10 w-fit px-4 font-semibold py-3 mb-3 rounded-r-full flex items-center gap-2 -translate-x-[180px] hover:-translate-x-1 transition duration-300 hover:shadow-[0_0_5px_#c27cff65] border border-secondary-300 "
       >
         View All Projects
         <MdWork size={20} />
