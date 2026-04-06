@@ -3,6 +3,7 @@ import AboutMe from "@/components/AboutMe/About";
 const Skills = dynamic(() => import("@/components/Skills/Skills"));
 import Contact from "@/components/Contact/Contact";
 import dynamic from "next/dynamic";
+import Background from "@/components/Background/background";
 
 export default function Home() {
   return (
@@ -15,6 +16,9 @@ export default function Home() {
       </section>
       <section id="skills">
         <Skills />
+      </section>
+      <section id="background">
+        <Background />
       </section>
       <section id="contact">
         <Contact />
