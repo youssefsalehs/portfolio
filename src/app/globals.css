@@ -4,7 +4,6 @@
 :root {
   --font-jetbrainsMono: "JetBrains Mono", monospace;
 }
-
 body {
   font-family: var(--font-jetbrainsMono);
 }
