@@ -1,10 +1,10 @@
 import HeroSection from "@/components/HeroSection/HeroSection";
 import AboutMe from "@/components/AboutMe/About";
 const Skills = dynamic(() => import("@/components/Skills/Skills"));
-import Contact from "@/components/Contact/Contact";
 import dynamic from "next/dynamic";
 import Background from "@/components/Background/background";
-
+import Projects from "@/components/Projects/Projects";
+import Contact from "@/components/Contact/Contact";
 export default function Home() {
   return (
     <div>
@@ -19,6 +19,9 @@ export default function Home() {
       </section>
       <section id="background">
         <Background />
+      </section>
+      <section id="projects">
+        <Projects />
       </section>
       <section id="contact">
         <Contact />
