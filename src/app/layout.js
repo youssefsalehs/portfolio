@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
               <main className="flex-1 max-w-7xl h-full px-8 mx-auto overflow-hidden">
                 {children}
               </main>
-              <footer className="text-center text-sm  shadow-2xl border-t border-t-secondary-600 py-8">
+              <footer className="text-center text-sm  shadow-2xl border-t border-t-secondary-600 py-6">
                 © {year}. All rights reserved.
               </footer>
             </Box>

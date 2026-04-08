@@ -17,8 +17,8 @@ export default function Links({ project }) {
         component={"a"}
         href={project.liveLink}
         target="_blank"
-        sx={{ color: "primary.light" }}
-        className="flex items-center !font-semibold justify-center gap-1  py-2 rounded  transition hover:-translate-x-2 opacity-80 hover:opacity-100"
+        sx={{ color: "primary.main", fontWeight: 900 }}
+        className="flex items-center  justify-center gap-1  py-2 rounded  transition hover:-translate-x-2 opacity-80 hover:opacity-100"
       >
         <LuSquareArrowOutUpRight />
         Live

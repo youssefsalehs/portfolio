@@ -9,7 +9,7 @@ export const metadata = {
 };
 export default function Products() {
   return (
-    <div className="flex flex-col  min-h-[88vh]   pt-20 gap-2 pb-6">
+    <div className="flex flex-col    pt-20 gap-2  min-h-[90vh]">
       <div className="self-start">
         <BackButton text="Back To Home Page" to="/" />
       </div>
