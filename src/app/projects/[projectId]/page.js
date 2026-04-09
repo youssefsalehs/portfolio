@@ -1,19 +1,18 @@
 import { featuredprojects } from "@/constants/constants";
-import { Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import { LuSquareArrowOutUpRight } from "react-icons/lu";
-import { VscGithubAlt } from "react-icons/vsc";
 import { MdOutlineTimer } from "react-icons/md";
 import BackButton from "@/components/Buttons/backbutton";
 import Hollow from "@/components/Text/HollowText";
 import Links from "@/components/Projects/ProjectLinks";
 import ProjectTabs from "@/components/ProjectDetails/ProjectsTabs";
-export async function generateMetadata(params) {
+export async function generateMetadata({ params }) {
   const { projectId } = await params;
+  const project = featuredprojects.find((p) => p.id == projectId);
+
   return {
-    title: `Pname`,
-    description: "project description",
+    title: `${project.title}`,
+    description: `${project.description}`,
   };
 }
 export default async function ProjectDetails({ params }) {
