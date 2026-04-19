@@ -13,7 +13,7 @@ export default function ThemeBtn() {
       aria-label="theme button"
       sx={{
         position: "fixed",
-        left: 20,
+        right: 20,
         bottom: 20,
         bgcolor: "secondary.main",
         zIndex: 50,

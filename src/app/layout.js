@@ -5,6 +5,8 @@ import { Box } from "@mui/material";
 import ThemeBtn from "@/components/ThemeBtn/themeBtn";
 import Navbar from "@/components/Navbar/navbar";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
+import MySessionProvider from "@/SessionProvider/SessionProvider";
+import { Toaster } from "react-hot-toast";
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -36,23 +38,26 @@ export default function RootLayout({ children }) {
       <body className=" flex flex-col ">
         <CustomThemeProvider>
           <AppRouterCacheProvider>
-            <Box
-              sx={{
-                bgcolor: "background.default",
-                color: "text.primary",
-                minHeight: "100vh",
-                transition: "all 0.3s",
-              }}
-            >
-              <ThemeBtn />
-              <Navbar />
-              <main className="flex-1 max-w-7xl h-full px-8 mx-auto overflow-hidden">
-                {children}
-              </main>
-              <footer className="text-center text-sm  shadow-2xl border-t border-t-secondary-600 py-6">
-                © {year}. All rights reserved.
-              </footer>
-            </Box>
+            <MySessionProvider>
+              <Toaster position="top-center" reverseOrder={false} />
+              <Box
+                sx={{
+                  bgcolor: "background.default",
+                  color: "text.primary",
+                  minHeight: "100vh",
+                  transition: "all 0.3s",
+                }}
+              >
+                <ThemeBtn />
+                <Navbar />
+                <main className="flex-1  h-full  overflow-hidden">
+                  {children}
+                </main>
+                <footer className="text-center text-sm  shadow-2xl border-t border-t-secondary-600 py-4">
+                  © {year}. All rights reserved.
+                </footer>
+              </Box>
+            </MySessionProvider>
           </AppRouterCacheProvider>
         </CustomThemeProvider>
       </body>

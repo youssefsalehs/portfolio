@@ -9,7 +9,7 @@ export default function Header({ title, desc }) {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          mb: 5,
+          mb: 2,
           px: 4,
           py: 2,
           width: "fit-content",
@@ -46,7 +46,7 @@ export default function Header({ title, desc }) {
           variant="h2"
           sx={{
             fontWeight: "bold",
-            fontSize: { xs: "2em", lg: "3em" },
+            fontSize: { xs: "1.8em", lg: "2.6em" },
             textAlign: "center",
             zIndex: 1,
             textTransform: "capitalize",
@@ -61,7 +61,7 @@ export default function Header({ title, desc }) {
             fontSize: { xs: ".8em", md: "1em" },
             maxWidth: 600,
             fontWeight: 600,
-            mt: 2,
+            mt: 1,
             color: "text.secondary",
             opacity: 0.8,
             zIndex: 1,

@@ -5,7 +5,7 @@ export default function NavLink({ link }) {
       component="li"
       sx={{
         position: "relative",
-        pb: 1,
+
         listStyle: "none",
         cursor: "pointer",
         "&:hover": {

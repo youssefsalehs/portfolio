@@ -4,9 +4,11 @@ import { Box } from "@mui/material";
 import { CiMenuFries } from "react-icons/ci";
 import { CgClose } from "react-icons/cg";
 import NavLink from "./navlink";
+import { signOut, useSession } from "next-auth/react";
+import Link from "next/link";
 export default function Sidebar({ navlinks }) {
   const [open, setOpen] = useState(false);
-
+  const { data: session, status } = useSession();
   return (
     <>
       <Box
@@ -48,10 +50,26 @@ export default function Sidebar({ navlinks }) {
           <CgClose />
         </Box>
 
-        <ul className="flex flex-col gap-6 w-full">
+        <ul className="flex flex-col gap-1 w-full">
           {navlinks.map((link, i) => (
             <NavLink link={link} key={i} />
           ))}
+          {session && (
+            <Box
+              component={"li"}
+              sx={{
+                px: 2,
+                py: 1,
+                cursor: "pointer",
+                bgcolor: "background.paper",
+                transition: "all 0.3s",
+                borderRadius: 1,
+                "&:hover": { bgcolor: "#2e8b57" },
+              }}
+            >
+              <Link href={"/manage"}>manage</Link>
+            </Box>
+          )}
         </ul>
       </Box>
     </>

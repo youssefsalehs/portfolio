@@ -7,9 +7,10 @@ export const metadata = {
   description:
     "Explore different categories of projects built by Youssef Ashraf using modern technologies like React and Next.js.",
 };
+
 export default function Products() {
   return (
-    <div className="flex flex-col    pt-20 gap-2  min-h-[90vh]">
+    <div className="flex flex-col justify-center    pt-24 gap-2">
       <div className="self-start">
         <BackButton text="Back To Home Page" to="/" />
       </div>

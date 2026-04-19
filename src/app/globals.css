@@ -10,3 +10,12 @@ body {
 html {
   scroll-behavior: smooth;
 }
+.heading {
+  @apply text-xl pb-1 font-bold border-b-2 border-dashed w-fit border-secondary-500;
+}
+.section {
+  @apply p-5 flex flex-col gap-3 bg-primary-800 bg-opacity-10 rounded border border-secondary-500 text-sm;
+}
+.input {
+  @apply border p-2 rounded bg-primary-900 bg-opacity-25 placeholder:text-[#ffffffa0] outline-none focus:outline-offset-0 focus:ring-2 focus:ring-secondary-500 border-secondary-500;
+}

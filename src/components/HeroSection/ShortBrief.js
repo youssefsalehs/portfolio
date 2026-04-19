@@ -46,49 +46,52 @@ export default function ShortBrief() {
               </Typography>
             </MyButton>
           </a>
-          <div className="flex gap-4">
-            {socialLinks.map((link, i) => (
-              <Typography
-                component="a"
-                key={i}
-                aria-label={link.name}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  border: 1,
-                  bgcolor: "#c27cff22",
-                  borderColor: "secondary.main",
-                  borderRadius: 1,
-                  p: 1.5,
-                  fontSize: "1.25rem",
-                  textDecoration: "none",
-                  color: "inherit",
-                  transition: "all 0.3s ease",
-                  "&:hover": {
-                    bgcolor: "secondary.main",
-                    borderColor: "secondary.dark",
 
-                    boxShadow: "0 0 15px #c27cff65",
-                  },
-                }}
-              >
-                {icons[link.icon]}
+          <Link href={"/projects"}>
+            <MyButton variant={"expand"}>
+              <span className="bgExpand"></span>
+              <Typography className="flex gap-1 items-center content !font-bold">
+                View All Projects
+                <MdWork size={20} />
               </Typography>
-            ))}
-          </div>
+            </MyButton>
+          </Link>
         </div>
       </div>
-      <Link
-        href={"/projects"}
-        className="bg-primary-500 bg-opacity-10 w-fit px-4 font-semibold py-3 mb-3 rounded-r-full flex items-center gap-2 -translate-x-[180px] hover:-translate-x-1 transition duration-300 hover:shadow-[0_0_5px_#c27cff65] border border-secondary-300 "
-      >
-        View All Projects
-        <MdWork size={20} />
-      </Link>
+      <div className="flex gap-4">
+        {socialLinks.map((link, i) => (
+          <Typography
+            component="a"
+            key={i}
+            aria-label={link.name}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              border: 1,
+              bgcolor: "#c27cff22",
+              borderColor: "secondary.main",
+              borderRadius: 1,
+              p: 1.5,
+              fontSize: "1.25rem",
+              textDecoration: "none",
+              color: "inherit",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                bgcolor: "secondary.main",
+                borderColor: "secondary.dark",
+
+                boxShadow: "0 0 15px #c27cff65",
+              },
+            }}
+          >
+            {icons[link.icon]}
+          </Typography>
+        ))}
+      </div>
     </div>
   );
 }
