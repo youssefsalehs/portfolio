@@ -3,18 +3,42 @@ import React, { useContext, useState } from "react";
 import { Button, TextField } from "@mui/material";
 import { IoIosSend } from "react-icons/io";
 import { ThemeContext } from "@/context/ThemeContext";
+import toast from "react-hot-toast";
 
 export default function Form() {
   const { mode } = useContext(ThemeContext);
   const [state, setState] = useState({ name: "", message: "", email: "" });
-  function onSubmit(e) {
+  async function onSubmit(e) {
     e.preventDefault();
-    console.log(state);
-    setState({
-      email: "",
-      name: "",
-      message: "",
-    });
+
+    const formData = {
+      name: state.name,
+      email: state.email,
+      message: state.message,
+    };
+
+    const res = await fetch(
+      `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORM_ID}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      },
+    );
+
+    if (res.ok) {
+      toast.success("Message sent!");
+      setState({
+        email: "",
+        name: "",
+        message: "",
+      });
+    } else {
+      toast.error("Something went wrong.");
+      console.log(res);
+    }
   }
   return (
     <div className="w-full lg:w-[49%]  rounded-md overflow-hidden bg-primary-800 border border-secondary-700 bg-opacity-10 p-8 ">

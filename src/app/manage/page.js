@@ -1,9 +1,7 @@
 import { authOptions } from "@/auth";
-import { Button } from "@mui/material";
 import { getServerSession } from "next-auth";
 import Link from "next/link";
 import React from "react";
-import { FaPlus, FaProjectDiagram, FaTasks, FaUser } from "react-icons/fa";
 
 export default async function ManagePage() {
   const session = await getServerSession(authOptions);

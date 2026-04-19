@@ -1,6 +1,5 @@
 import React from "react";
 import { skillIcons } from "@/constants/constants";
-import { Typography } from "@mui/material";
 export default function SkillsCard({ skill, skillsInSkill }) {
   const Icon = skillIcons[skill]?.icon;
   return (

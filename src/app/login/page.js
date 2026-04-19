@@ -33,7 +33,6 @@ export default function LoginPage() {
       redirect: false,
       callbackUrl: "/",
     });
-    console.log(res);
     if (res.ok) {
       toast.success("logged in successfully");
       window.location.href = "/manage";

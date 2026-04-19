@@ -67,7 +67,6 @@ export default function AddForm() {
     } else {
       toast.error(res.message);
     }
-    console.log(res);
   };
   return (
     <div>

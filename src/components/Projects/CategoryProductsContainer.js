@@ -2,7 +2,6 @@ import React from "react";
 import ProjectCard from "./ProjectCard";
 
 export default function ProjectsContainer({ projects }) {
-  const ITEMS_IN_Page = 9;
 
   return (
     <div className="flex flex-col items-center gap-6">

@@ -22,11 +22,9 @@ export const authOptions = {
           headers: { "Content-Type": "application/json" },
         });
         const payload = await res.json();
-        console.log(payload);
         // return null;
         if (payload.status === "success") {
           const decoded = jwtDecode(payload.token);
-          console.log(decoded);
           return { id: decoded.id, user: payload.user, token: payload.token };
         } else {
           throw new Error(payload.message || "invalid credentials");

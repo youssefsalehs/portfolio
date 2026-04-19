@@ -6,7 +6,6 @@ import Links from "./Links";
 export default function ProjectCard({ project }) {
   const shownTechnologies = project.technologies.slice(0, 3);
   const remainingTechs = project.technologies.length - 3;
-  console.log(project);
   return (
     <div className="flex flex-col  bg-primary-800 border border-secondary-500 bg-opacity-10  rounded-xl hover:shadow-[0_0_15px_#c27cff65] transition-transform duration-300 transform hover:-translate-y-2 overflow-hidden p-4">
       <div className="relative w-full h-52 rounded-md overflow-hidden border border-secondary-500">

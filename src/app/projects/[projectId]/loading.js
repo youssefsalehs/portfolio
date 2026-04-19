@@ -1,6 +1,5 @@
 import React from "react";
 import { FaSpinner } from "react-icons/fa";
-import { SiSpinnaker } from "react-icons/si";
 
 export default function Loading() {
   return (
