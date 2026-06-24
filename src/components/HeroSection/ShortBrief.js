@@ -4,7 +4,7 @@ import { SiGmail } from "react-icons/si";
 import { FaWhatsapp } from "react-icons/fa";
 import { socialLinks } from "@/constants/constants";
 import { Typography } from "@mui/material";
-import { HiOutlineDownload } from "react-icons/hi";
+import { FaRegEye } from "react-icons/fa";
 import Link from "next/link";
 import { MdWork } from "react-icons/md";
 import MyButton from "../Buttons/mybutton";
@@ -38,14 +38,19 @@ export default function ShortBrief() {
       </p>
       <div className="flex flex-col md:items-center lg:items-start  gap-6 py-2">
         <div className="flex gap-4 items-center  justify-center lg:justify-start flex-wrap">
-          <a href="/resume.pdf" download>
+          <Link
+            href={
+              "https://drive.google.com/drive/folders/1kAEW0VrmLcCFDMjERk9elxjd5D1WcjvI?usp=sharing"
+            }
+            target="_blank"
+          >
             <MyButton variant="expand">
               <span className="bgExpand"></span>
               <Typography className="flex gap-1 items-center content !font-bold">
-                Download CV <HiOutlineDownload size={20} />
+                View CV <FaRegEye size={20} />
               </Typography>
             </MyButton>
-          </a>
+          </Link>
 
           <Link href={"/projects"}>
             <MyButton variant={"expand"}>

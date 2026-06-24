@@ -131,7 +131,6 @@ export const experienceData = [
     mode: "Remote",
     stack: ["React", "JavaScript", "Zustand", "Tailwind"],
     responsibilities: [
-      "Developed a full-featured e-commerce application using React.js",
       "Implemented search, filtering, sorting, and pagination functionalities",
       "Managed application state using URL query parameters",
       "Built wishlist and product comparison features",
